@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebubekir Güngör | Full Stack Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex top_title">Hi, I'm Ebubekir 🖐️</div>
+    <div class="flex title">Contact</div>
+    <div class="contact">
+      <div>
+        E-mail:
+        <a class="link" href="mailto:ebubekirgungor2003@gmail.com"
+          >ebubekirgungor2003@gmail.com</a
+        >
+      </div>
+      <div>
+        Github:
+        <a class="link" href="https://github.com/ebubekirgungor"
+          >https://github.com/ebubekirgungor</a
+        >
+      </div>
+    </div>
+    <div class="flex title">My projects</div>
+    <div class="container">
+      <div class="project">
+        <img src="shop.png" class="image" />
+        <div class="description">
+          E-commerce app written in <br />
+          Nuxt.js & Go
+          <div class="flex links">
+            <a
+              href="https://github.com/ebubekirgungor/shop"
+              class="icon github"
+            >
+            </a>
+            <a href="https://go-nuxt.shop" class="icon live"></a>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <img src="blog.png" class="image" />
+        <div class="description">
+          Simple blog app written in Nuxt.js
+          <div class="flex links">
+            <a
+              href="https://github.com/ebubekirgungor/nuxt-blog"
+              class="icon github"
+            >
+            </a>
+            <a
+              href="https://nuxt-blog-ebubekirgungor.vercel.app"
+              class="icon live"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <img src="todolist.png" class="image" />
+        <div class="description">
+          Simple to-do app written in Rust
+          <div class="flex links">
+            <a
+              href="https://github.com/ebubekirgungor/todolist-rust"
+              class="icon github"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="other_projects">
+        <div class="project">
+          <div class="description">
+            E-commerce app written in Java Spring Boot
+            <div class="flex links">
+              <a
+                href="https://github.com/ebubekirgungor/shop-springboot"
+                class="icon github"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="description">
+            Book order api written in Nest.js
+            <div class="flex links">
+              <a
+                href="https://github.com/ebubekirgungor/nestjs-siparis-api"
+                class="icon github"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="description">
+            Stock tracking panel written in Laravel
+            <div class="flex links">
+              <a
+                href="https://github.com/ebubekirgungor/stok-takip"
+                class="icon github"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    :root {
+      --box_width: 32rem;
+      --border_radius: 10px;
+      --gap: 1rem;
+      --image_height: 18rem;
+    }
+    @media (max-width: 640px) {
+      :root {
+        --box_width: 21rem;
+        --image_height: 12rem;
+      }
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      user-select: none;
+      margin-top: 0;
+      background-color: #fcfcfc;
+      font-family: "Poppins";
+    }
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+    .top_title {
+      height: 8rem;
+      font-size: xx-large;
+    }
+    .title {
+      height: 7rem;
+      font-size: x-large;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: var(--gap);
+      font-size: large;
+      text-align: center;
+    }
+    .link {
+      color: black;
+    }
+    .container {
+      max-width: calc(var(--box_width) * 2 + var(--gap));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--gap);
+    }
+    .project {
+      background-color: white;
+      width: var(--box_width);
+      height: min-content;
+      border-radius: var(--border_radius);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .other_projects {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--gap);
+    }
+    .image {
+      border-top-left-radius: var(--border_radius);
+      border-top-right-radius: var(--border_radius);
+      width: var(--box_width);
+      height: var(--image_height);
+      -webkit-user-drag: none;
+    }
+    .description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      height: 5rem;
+    }
+    .links {
+      height: 5rem;
+      column-gap: var(--gap);
+    }
+    .icon {
+      background-position: 50%;
+      background-size: 75%;
+      background-repeat: no-repeat;
+      background-color: #0000000c;
+      transition: all 200ms ease-in-out;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+    }
+    .icon:hover {
+      background-color: #00000021;
+    }
+    .icon.github {
+      background-image: url("github.png");
+    }
+    .icon.live {
+      background-image: url("web.png");
+    }
+  </style>
+</html>
